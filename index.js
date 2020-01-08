@@ -7,3 +7,6 @@ const math ={
     };
 
 module.exports = math;
+
+const result = math.add(3,5);
+console.log(result);
