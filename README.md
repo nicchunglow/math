@@ -9,13 +9,22 @@ npm install @nicchunglow/math
 ```
 ## Usage 
 ``` 
+To use : 
 const math = require('@nicchunglow/math')
+
+- Addition (2 args only)
 const result = math.add(1,1)
 multi-args addition =
-SUM
+
+- Multi-arg Sum
 function sum(...numbers){
   return numbers.reduce((a, b) => a + b, 0);
 }
+
+- Multi-arg Minus
+function minus(firstNum, ...numbers){
+    return numbers.reduce((a, b) => a -b ,firstNum);
+  }
 ```
 ## API
 `math.add(number, number)`
