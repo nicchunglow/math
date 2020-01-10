@@ -1,12 +1,17 @@
-const add = function(a,b){
-    return a+b;
+const assert = require("assert");
+
+const add = function(a, b) {
+return a + b;
+};
+const math = {
+    add: add
 };
 
-const math ={
-    add:add
-    };
+function sum(...numbers){
+  return numbers.reduce((a, b) => a + b, 0);
+}
 
+console.log(sum(1, 2, 3, 4, 5));
 module.exports = math;
-
-const result = math.add(3,5);
-console.log(result);
+assert.strictEqual(sum(1, 2, 3, 4), 10);
+console.log("all good");
